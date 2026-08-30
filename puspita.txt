@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            border: 5px solid red;
+            background-color: gray;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            row-gap: 5px;
+            column-gap: 10px;
+            padding: 10px;
+        }
+
+        .grid div {
+            padding: 40px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .left div,
+        .right div {
+            border: 4px dotted blue;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .header {
+            border: 4px dotted red;
+            background-color: royalblue;
+            grid-area: 1 / 1 / span 1 / span 3;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        .menu {
+            border: 4px dotted blue;
+            grid-column: 1 / 2;
+        }
+
+        .main {
+            border: 4px dotted blue;
+            grid-column: 2 / 3;
+        }
+
+        .sidebar {
+            border: 4px dotted blue;
+            grid-column: 3 / 4;
+        }
+
+        .footer {
+            border: 4px dotted greenyellow;
+            background-color: royalblue;
+            grid-column: 1 / 4;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="grid">
+        <div class="header">1</div>
+
+        <div class="left">
+            <div>2</div>
+            <div>2</div>
+        </div>
+
+        <div class="main">3</div>
+
+        <div class="right">
+            <div>4</div>
+            <div>4</div>
+        </div>
+
+        <div class="footer">5</div>
+    </div>
+
+</body>
+
+</html>
