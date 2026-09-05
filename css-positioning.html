@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .parent-container {
+      position: relative;
+      border: 3px dashed #333;
+      padding: 20px;
+      margin: 40px;
+      height: 300px;
+      background-color: #f9f9f9;
+    }
+
+    .box {
+      width: 120px;
+      height: 60px;
+      color: white;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .static-box {
+      position: static;
+      background-color: #34495e;
+      top: 20px;
+    }
+
+    .relative-box {
+      position: relative;
+      top: 20px;
+      left: 30px;
+      background-color: #3498db;
+    }
+
+    .absolute-box {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #e74c3c;
+    }
+
+    .fixed-box {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #9b59b6;
+    }
+    
+    .sticky-box {
+      position: sticky;
+      top: 0;
+      background-color: #2ecc71;
+      margin-bottom: 30px;
+      width: 100%;
+      z-index: 1;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="box sticky-box">Sticky Header</div>
+
+  <p>Scroll down the page to observe the sticky header and the fixed button behaviors.</p>
+
+  <div class="parent-container">
+    <div class="box static-box">Static Box</div>
+    <div class="box relative-box">Relative Box</div>
+    <div class="box absolute-box">Absolute Box</div>
+  </div>
+
+  <input class="box fixed-box" type="button" value="Back to Top" />
+
+
+</body>
+
+</html>
+
